@@ -25,3 +25,16 @@ for x in range(10):
 for x in range(1, 10, 2):
     print(x)
 
+#accessing list elements
+print(names[0])
+
+#appending new values
+names.append("Shelly")
+
+#Finding a length is in a function called len
+print(len(names))
+
+#See if a element is in a list
+
+if "Rico" in names:
+    print("Rico is in names")
