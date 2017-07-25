@@ -38,3 +38,49 @@ print(len(names))
 
 if "Rico" in names:
     print("Rico is in names")
+
+# delete a value from a list - i.e. Celine value in this case
+del names[3] 
+print(names, " has no Celine after delete")
+
+#bools, while loops, and break
+whileCon = True
+whileCounter = 0
+while whileCon:
+    print("hello " + str(whileCounter))
+    whileCounter += 1
+    if whileCounter >= 10:
+        break
+
+# dictionary examples.  dictionary is key/value pair.  Again, type doesnt matter you can mix type.  Also, you access, delete, update, and add very similar to lists
+myDict = {
+    "name": "Rico",
+    "age": 27,
+    "occupation": "Software Engineer",
+    "kids": None
+}
+#add or update can be done this way
+myDict["years on job"] = 5
+#delete
+del myDict["kids"]
+
+#try and except blocks
+try:
+    #kids key/value deleted above will result in KeyError
+    #kids = myDict["kids"]
+    print("will throw an Exception bc you cant do " + 5  + "this")
+except KeyError as error:
+    print("A key error occurred")
+    print(error)
+except Exception:
+    print("Exception catches everything")
+
+#We missed tuples and sets in this example module.
+#tuple is an immutable list
+#a set is the same as a Set in another language
+
+
+
+
+
+
