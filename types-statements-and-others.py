@@ -22,6 +22,7 @@ for name in names:
 for x in range(10):
     print(x)
 #Prints odd numbers as 1 declares the start, 10 is exclusive end, and 2 is number of steps to take during each itteration
+#Range is a built in function.  Underneath the hood its a function the yeilds a result doesnt return one.  See functions-files-yeilds-lambda.py for more info
 for x in range(1, 10, 2):
     print(x)
 

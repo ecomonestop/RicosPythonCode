@@ -29,7 +29,26 @@ def continue_to_add_students_promt():
     continue_to_add_students = input("Would you like to add another student y/n: ")
     return continue_to_add_students
 
+def save_file(student_name):
+    try:
+        f = open("student-names.txt", 'a')
+        f.write(student_name + "\n")
+        f.close()
+    except Exception as e:
+       print("Cannot save files")
 
+def read_file():
+    try:
+        f = open("student-names.txt", 'r')
+        for student_name in f.readlines():
+            add_student(student_name)
+        f.close()
+    except Exception as e:
+        print("could not read file")
+    
+# A bug is present, after 3 times of entering names you get duplicate names printed out from students list when running print_student_titlecase first time
+read_file()
+print_student_titlecase()
 promt_user_to_add_student()
 continue_to_add_students = continue_to_add_students_promt()
 while True:
@@ -37,5 +56,9 @@ while True:
         promt_user_to_add_student()
         continue_to_add_students = continue_to_add_students_promt()
     else:
-        print_student_titlecase()
+        mySet = set()
+        for student in students:
+            mySet.add(student['name'])
+        for student_name in mySet:
+            save_file(student_name)
         break

@@ -31,6 +31,15 @@ def var_kwargs(name, **kwargs):
     print(name)
     print(kwargs["job"], kwargs["company"])
 
+#You can use a yield function as a itterable when looping.  Below is an example
+def call_yield_students():
+    for student in yield_students():
+        print(student + " from call yield students") 
+#yield statement below returns a value one at a time instead of all at once as a normal return would
+def yield_students():
+    for student in students:
+        yield student
+
 #calling a function and overriding the default parameter value
 add_student("Rico", 1)
 #Calling a function and using the default value of the paramater
@@ -39,4 +48,8 @@ add_student("Nico")
 var_args("Rico", "Shelly", None, 34, 23.0)
 #Calling var_kwargs to show we can pass in as much arguments as we want and naming them
 var_kwargs("Rico", file="no file", job="IT", company="GE")
+
+#a function yielding a result instead of return
+
+call_yield_students()
 
