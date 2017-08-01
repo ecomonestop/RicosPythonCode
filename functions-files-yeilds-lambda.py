@@ -53,3 +53,7 @@ var_kwargs("Rico", file="no file", job="IT", company="GE")
 
 call_yield_students()
 
+#example of a lambda function
+myFunc = lambda x: x + 1
+print(myFunc(1))
+
