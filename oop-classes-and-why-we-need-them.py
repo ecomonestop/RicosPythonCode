@@ -64,6 +64,8 @@ print(myBetterStudent)
 print(Student.school_name)
 
 
+#not shown here, but to import modules in python, modules being files, you can use the from <module name> import <class> | <function> | *
+
 
 
 
