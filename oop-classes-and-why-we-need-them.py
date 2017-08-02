@@ -40,6 +40,24 @@ class Student:
         #note you still have to use self in order to access class attributes within the class as shown below
         return self.school_name
 
+#To inherit, you must put the parent class in parethesis as shown below.  You can inherit from multiple classes
+#There is no concept of interfaces nor access modifyers e.g. private, so by default everything is public and can be overriden.  But by convention, to denote not to override, you prefix the class member with a underscore '_'
+class HighSchoolStudent(Student):
+    #overriding the class attribute in student.  
+    school_name = "Carlson High School"
+
+    #overriding and using super keyword
+    def get_name_capitalized(self):
+        return super().get_name_capitalized() + " is HighSchool student"
+
+    #Of course HighSchool Student can add its own unqiue behavior
+
+
+bigKid = HighSchoolStudent("Nico")
+print(bigKid.get_name_capitalized())
+print(HighSchoolStudent.school_name)
+
+
 myBetterStudent = Student("Rico")
 print(myBetterStudent)
 #notice you can access class attributes without a particular instance i.e. same as Java's classes static variables
