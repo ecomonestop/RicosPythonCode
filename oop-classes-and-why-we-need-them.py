@@ -43,11 +43,24 @@ class Student:
 #To inherit, you must put the parent class in parethesis as shown below.  You can inherit from multiple classes
 #There is no concept of interfaces nor access modifyers e.g. private, so by default everything is public and can be overriden.  But by convention, to denote not to override, you prefix the class member with a underscore '_'
 class HighSchoolStudent(Student):
+    """
+    Documentation in form of comments come inside the class or function body, not outside like Java
+    standard syntax is as follows:
+    :param name: string - student name
+    :param id: integer - optional student id
+
+    As you can see, we give the type and a short description of what we are documenting
+    This shows up in intellesince in IDEs
+    """
+
     #overriding the class attribute in student.  
     school_name = "Carlson High School"
 
     #overriding and using super keyword
     def get_name_capitalized(self):
+        """
+        Comment in a function first line in body same as a comment in a class
+        """
         return super().get_name_capitalized() + " is HighSchool student"
 
     #Of course HighSchool Student can add its own unqiue behavior
