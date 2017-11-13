@@ -1,4 +1,4 @@
-#function examples
+#function examples.  Just a test
 students = []
 
 #functions are lower case seperated by _ and keyword def is used
